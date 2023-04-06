@@ -1,6 +1,6 @@
-document.getElelmentById("myButton").onclick = function(){
+document.getElementById("myButton").onclick = function(){
 
     var myName = document.getElementById("myText").value;
-    console.log ("Hello", myName);
+    console.log("Hello", myName);
 
 }
