@@ -13,41 +13,81 @@
 <body>
 
     <label>Account:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText1"><br>
 
     <label>SecCode:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText2"><br>
 
     <label>Exchange:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText3"><br>
 
     <label>Life:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText4"><br>
 
     <label>Dest:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText5"><br>
     
     <label>Side:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText6"><br>
     
     <label>Vol:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText7"><br>
 
     <label>Price:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText8"><br>
 
     <label>Spread:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText9"><br>
 
     <label>Price Step:</label><br>
-    <input type = "text" id = "myText"><br>
+    <input type = "text" id = "myText10"><br>
 
-    <button type = "button" id="myButton"> submit</button>
+    <button type = "button" id="myButton11"> submit</button>
 
     <div id="plot"></div>
     <py-script output="plot">
+        from js import document
+        from pyodide import create_proxy 
 
-        print("Hello World")
+        
+
+        def submit (); 
+
+            Account=Element('mytext1').element 
+            Accounttext = Account.value
+
+            SecCode=Element('mytext2').element 
+            SecCodetext = SecCode.value
+
+            Exchange=Element('mytext3').element 
+            Exchangetext = Exchange.value
+
+            Life=Element('mytext4').element 
+            Lifetext=Life.value
+
+            Dest=Element('mytext5').element 
+            Desttext= Dest.value
+
+            Side=Element('mytext6').element 
+            Sidetext= Side.value
+
+            Vol=Element('mytext7').element 
+            Voltext= Vol.value 
+
+            Price=Element('mytext8').element 
+            Pricetext= Price.value 
+
+            Spread=Element('mytext9').element 
+            Spreadtext= Spread.value
+
+            PriceStep=Element('mytext10').element 
+            PriceStepstext= PriceStep.value 
+
+            print(Accounttext+" " +SecCodetext + " " + Exchangetext + " " + Lifetext + " " + Desttext + " " + Sidetext + " " + Voltext + " " + Price + " " + Spread " " + PriceStepstext) 
+
+        submit_proxy = create_proxy(submit)
+        submit_button = document.getElementById("submit")
+        submit_button.addEventListener("click", submit_proxy)
 
 
     </py-script>
