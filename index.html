@@ -13,7 +13,7 @@
 <body>
 
     <label>Account:</label><br>
-    <input type = "text" id=" myText1" name = "myText1"><br>
+    <input type = "text" id=" myText1"><br>
 
     <label>SecCode:</label><br>
     <input type = "text" id = "myText2"><br>
@@ -45,22 +45,15 @@
     <input type = "button" id="myButton11" value= "Submit"><br>
 
     <div id="plot"></div>
+
     <py-script output="plot">
-        from js import document
-        from pyodide import create_proxy 
 
-        
+        def my_function(*args, **kwargs): 
 
-        def submit (e): 
+            text=Element("myText1").element.value 
+            console.log(test_text)
 
-            Account=Element('mytext1').element 
-            Accounttext = Account.value
-
-            print(Accounttext) 
-
-        submit_proxy = create_proxy(submit)
-        submit_button = document.getElementById("myButton11")
-        submit_button.addEventListener("click", submit_proxy)
+            print(text) 
 
 
     </py-script>
