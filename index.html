@@ -13,7 +13,7 @@
 <body>
 
     <label>Account:</label><br>
-    <input type = "text" id = "myText1"><br>
+    <input type = "text" name = "myText1"><br>
 
     <label>SecCode:</label><br>
     <input type = "text" id = "myText2"><br>
@@ -58,7 +58,7 @@
 
             print(Accounttext) 
 
-        submit_proxy = create_proxy(myText1)
+        submit_proxy = create_proxy(submit)
         submit_button = document.getElementById("myButton11")
         submit_button.addEventListener("click", submit_proxy)
 
