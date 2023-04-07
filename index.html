@@ -44,11 +44,9 @@
 
     <input type = "button" id="myButton11" value= "Submit"><br>
 
-    <div id="plot"></div>
+    <p id="text-output"></p>
     
-    <py-script output="plot">
-        from js import document
-        from pyodide import create_proxy 
+    <py-script>
 
         
 
@@ -56,8 +54,9 @@
 
             text=Element("myText1").element.value 
             console.log(text)
+            Element("text-output").element.interHTMl= text 
 
-            print(text) 
+
 
 
     </py-script>
