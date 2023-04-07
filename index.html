@@ -56,36 +56,9 @@
             Account=Element('mytext1').element 
             Accounttext = Account.value
 
-            SecCode=Element('mytext2').element 
-            SecCodetext = SecCode.value
-
-            Exchange=Element('mytext3').element 
-            Exchangetext = Exchange.value
-
-            Life=Element('mytext4').element 
-            Lifetext=Life.value
-
-            Dest=Element('mytext5').element 
-            Desttext= Dest.value
-
-            Side=Element('mytext6').element 
-            Sidetext= Side.value
-
-            Vol=Element('mytext7').element 
-            Voltext= Vol.value 
-
-            Price=Element('mytext8').element 
-            Pricetext= Price.value 
-
-            Spread=Element('mytext9').element 
-            Spreadtext= Spread.value
-
-            PriceStep=Element('mytext10').element 
-            PriceStepstext= PriceStep.value 
-
             print(Accounttext) 
 
-        submit_proxy = create_proxy(submit)
+        submit_proxy = create_proxy(myText1)
         submit_button = document.getElementById("myButton11")
         submit_button.addEventListener("click", submit_proxy)
 
