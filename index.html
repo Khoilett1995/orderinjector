@@ -21,8 +21,6 @@
         import uuid
         import time
 
-        username = "admin@Iress"
-
     <py-env>
 </head>
 <body>
@@ -117,7 +115,7 @@
             iosPlusClient.set_ns_prefix("ns0", "http://webservices.iress.com.au/v4/")
             iressSessionStartResponse = iosPlusClient.service.IRESSSessionStart(iosPlusClientFactory.IRESSSessionStartInput(Header=iosPlusClientFactory.IRESSSessionStartInputHeader(Updates=False), Parameters=iosPlusClientFactory.IRESSSessionStartInputParameters(UserName=username, CompanyName=companyname, ApplicationID=appId, Password=password, SessionNumberToKick=-2, KickLikeSessions=True)))
             console.log (iressSessionStartResponse)
-            
+
     </py-script>
     
 </body>
