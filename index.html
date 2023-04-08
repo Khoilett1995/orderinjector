@@ -86,7 +86,7 @@
             PriceStep=Element("myText9").element.value 
             console.log(PriceStep)
 
-            response = pyfetch(url='http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IOSPLUS&svr=CIBCISI2&pw=pMafjqTeSjnxSQgJY2Zg')
+            response = await pyfetch(url='http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IOSPLUS&svr=CIBCISI2&pw=pMafjqTeSjnxSQgJY2Zg')
             console.log(response)
 
     </py-script>
