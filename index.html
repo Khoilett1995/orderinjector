@@ -85,19 +85,7 @@
             PriceStep=Element("myText9").element.value 
             console.log(PriceStep)
 
-            ppId = "uuid4"  
 
-            companyname = "IRESS"
-            password = "pMafjqTeSjnxSQgJY2Zg"
-
-            settings = Settings(strict = False, xml_huge_tree = True)
-
-            iosPlusWsdl = "http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IOSPLUS&svr=CIBCISI&pw=pMafjqTeSjnxSQgJY2Zg"
-            iosPlusClient = Client(iosPlusWsdl, settings=settings)
-            iosPlusClientFactory = iosPlusClient.type_factory('http://webservices.iress.com.au/v4/')
-            iosPlusClient.set_ns_prefix("ns0", "http://webservices.iress.com.au/v4/")
-            iressSessionStartResponse = iosPlusClient.service.IRESSSessionStart(iosPlusClientFactory.IRESSSessionStartInput(Header=iosPlusClientFactory.IRESSSessionStartInputHeader(Updates=False), Parameters=iosPlusClientFactory.IRESSSessionStartInputParameters(UserName=username, CompanyName=companyname, ApplicationID=appId, Password=password, SessionNumberToKick=-2, KickLikeSessions=True)))
-            console.log (iressSessionStartResponse)
 
     </py-script>
     
