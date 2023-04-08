@@ -49,10 +49,13 @@
     <p id="text-output"></p>
     
     <py-script> 
-        import asyncio
-        import re
-        from pyodide.http import pyfetch
+    import asyncio
+    import re
+    from pyodide.http import pyfetch
 
+    response = await pyfetch(url='http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IOSPLUS&svr=CIBCISI2&pw=pMafjqTeSjnxSQgJY2Zg')
+    console.log(response)
+    
         def my_function(a): 
 
             Account=Element("myText1").element.value 
@@ -85,8 +88,7 @@
             PriceStep=Element("myText9").element.value 
             console.log(PriceStep)
 
-            response = await pyfetch(url='http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IOSPLUS&svr=CIBCISI2&pw=pMafjqTeSjnxSQgJY2Zg')
-            console.log(response)
+
 
     </py-script>
     
